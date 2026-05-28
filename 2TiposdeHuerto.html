@@ -1,0 +1,271 @@
+<!DOCTYPE html> <!-- Define el tipo de documento y la versión de HTML -->
+<html lang="es"> <!-- Establece el idioma en español -->
+<head> <!-- Sección de cabecera -->
+<meta charset="UTF-8"> <!-- Codificación de caracteres -->
+<title>TIPOSDEHUERTOS</title> <!-- Título de la pestaña -->
+<style> /* Inicia sección de estilos CSS */
+
+/* -------------------------- ESTILO GENERAL DEL CUERPO -------------------------- */
+body{
+background-color: #E8F5E9; /* Color de fondo verde muy claro */
+font-family: "Segoe UI", Roboto, sans-serif; /* Fuente principal igual a la página 1 */
+margin: 0px; /* Sin margen exterior */
+padding: 20px; /* Espacio alrededor de toda la página */
+}
+
+/* -------------------------- CONTENEDOR PRINCIPAL -------------------------- */
+.contenedor{
+text-align: center; /* Centra todo el contenido */
+max-width: 1200px; /* Ancho máximo igual */
+margin: auto; /* Centra el bloque en la pantalla */
+background-color: rgba(255,255,255,0.85); /* Fondo blanco semitransparente */
+padding: 30px; /* Espacio interno */
+border-radius: 20px; /* Bordes redondeados */
+box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Sombra suave */
+position: relative; /* Necesario para posicionar el logo */
+}
+
+/* -------------------------- LOGO EN ESQUINA -------------------------- */
+.logo-esquina{
+position: absolute; /* Posición fija respecto al contenedor */
+top: 15px; /* Distancia desde arriba */
+left: 15px; /* Distancia desde la izquierda */
+width: 140px; /* Tamaño igual */
+height: 140px; /* Tamaño igual */
+object-fit: cover; /* Ajuste de imagen */
+border-radius: 50%; /* Forma circular */
+border: 4px solid #66BB6A; /* Borde verde */
+background-color: white; /* Fondo blanco detrás */
+padding: 4px; /* Espacio interno */
+box-shadow: 0 3px 6px rgba(0,0,0,0.1); /* Sombra ligera */
+transition: transform 0.3s ease; /* ANIMACIÓN: Transición suave */
+}
+
+/* -------------------------- EFECTO AL PASAR EL MOUSE EN EL LOGO -------------------------- */
+.logo-esquina:hover{
+transform: scale(1.05); /* Efecto de aumento leve, igual que el primero */
+}
+
+/* -------------------------- ESTILO DEL TÍTULO PRINCIPAL -------------------------- */
+h1{
+color: #2E7D32; /* Color verde oscuro */
+font-size: 48px; /* Tamaño grande */
+text-align: center; /* Texto centrado */
+width: fit-content; /* Ancho ajustado al texto */
+text-shadow: 2px 2px 4px rgba(0,0,0,0.1); /* Sombra de texto */
+padding-bottom: 10px; /* Espacio debajo del texto */
+border-bottom: 4px solid #FF9800; /* Línea naranja debajo, IGUAL a la imagen */
+margin: 40px auto 30px auto; /* Separación correcta para que no pegue al logo */
+display: block; /* Comportamiento de bloque */
+font-weight: bold; /* Texto en negrita */
+letter-spacing: 1.5px; /* Espaciado entre letras */
+}
+
+/* -------------------------- ESTILO DE LOS SUBTÍTULOS -------------------------- */
+h2{
+color: #5D4037; /* Color marrón */
+font-size: 28px; /* Tamaño de letra */
+text-align: left; /* Alineación a la izquierda */
+text-shadow: 1px 1px 3px rgba(0,0,0,0.1); /* Sombra ligera */
+padding: 10px 0; /* Espacio arriba y abajo */
+border-bottom: 3px solid #81C783; /* Línea decorativa verde clara */
+display: inline-block; /* Ajuste al contenido */
+margin-left: 0; /* Sin margen izquierdo */
+}
+
+/* -------------------------- ESTILO DEL MENÚ DE NAVEGACIÓN -------------------------- */
+.menu{
+display: flex; /* Alineación horizontal */
+align-items: center; /* Centrado vertical */
+justify-content: center; /* Centrado horizontal */
+flex-wrap: nowrap; /* Sin salto de línea */
+gap: 8px; /* Espacio entre botones */
+margin: 50px auto 30px auto; /* SEPARACIÓN CORRECTA: Arriba separado, igual al diseño */
+padding: 8px 15px; /* Relleno interno */
+background-color: rgba(121, 85, 72, 0.1); /* Fondo tenue del recuadro */
+border-radius: 15px; /* Bordes redondeados */
+width: fit-content; /* Ancho automático */
+box-shadow: 0 2px 6px rgba(0,0,0,0.09); /* Sombra suave del recuadro */
+}
+
+/* -------------------------- ESTILO DE LOS BOTONES -------------------------- */
+button{
+width: 125px; /* Ancho fijo */
+height: 42px; /* Altura fija */
+font-size: 12px; /* Tamaño de letra */
+font-weight: bold; /* Negrita */
+color: white; /* Texto blanco */
+background-color: #66BB6A; /* Fondo verde */
+border: none; /* Sin borde */
+border-radius: 8px; /* Bordes redondeados */
+cursor: pointer; /* Manita al pasar */
+box-shadow: 0 3px 6px rgba(0,0,0,0.15); /* Sombra de botón */
+transition: all 0.3s ease; /* Animación suave */
+}
+
+/* -------------------------- EFECTO HOVER BOTONES -------------------------- */
+button:hover{
+background-color: #FF9800; /* Cambio a naranja */
+transform: translateY(-2px); /* Efecto de levantar */
+}
+
+/* -------------------------- SECCIÓN DE CONTENIDO -------------------------- */
+.contenido-texto{
+text-align: left; /* Texto alineado a la izquierda */
+max-width: 1000px; /* Ancho máximo */
+margin: 0 auto; /* Centrado del bloque */
+}
+
+/* -------------------------- ESTILO DE PÁRRAFOS (RECUDRO AMARILLO/NARANJA) -------------------------- */
+p{
+font-size: 18px; /* Tamaño de letra */
+line-height: 1.7; /* Espaciado entre líneas */
+color: #333333; /* Color de texto gris oscuro */
+text-align: justify; /* Texto justificado */
+padding: 20px; /* Espacio interno */
+background-color: #fcf8dc; /* COLOR AMARILLO/BEIGE IGUAL A LA IMAGEN */
+border-radius: 4px; /* Bordes ligeramente redondeados */
+margin: 15px 0; /* Espacio entre párrafos */
+border-left: 4px solid #ff9800; /* Borde izquierdo naranja, IGUAL al diseño */
+}
+
+/* -------------------------- CONTENEDOR DE IMÁGENES -------------------------- */
+.contenedor-imagenes{
+display: flex; /* Organización en fila */
+justify-content: center; /* Centrado */
+align-items: center; /* Alineación vertical */
+flex-wrap: wrap; /* Permite salto de línea */
+gap: 12px; /* Espacio entre imágenes */
+margin: 25px 0; /* Espacio arriba y abajo */
+}
+
+/* -------------------------- ESTILO DE IMÁGENES -------------------------- */
+.contenedor-imagenes img{
+width: 300px; /* Ancho de imagen */
+height: 200px; /* Altura de imagen */
+object-fit: cover; /* Ajuste sin deformar */
+border-radius: 8px; /* Bordes redondeados */
+box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* Sombra */
+border: 3px solid #c8e6c9; /* Borde verde claro */
+transition: transform 0.3s ease; /* Animación */
+}
+
+/* -------------------------- EFECTO HOVER IMÁGENES -------------------------- */
+.contenedor-imagenes img:hover{
+transform: scale(1.05); /* Zoom leve */
+}
+
+</style> <!-- Fin de estilos -->
+</head> <!-- Fin de cabecera -->
+
+<body> <!-- Inicio del contenido visible -->
+
+<div class="contenedor"> <!-- Contenedor principal -->
+
+    <!-- Logo con efecto de movimiento -->
+    <img src="Imagenes/imagen52.jpeg" alt="Logo" class="logo-esquina">
+
+    <!-- Título principal -->
+    <h1>TIPOS DE HUERTOS</h1>
+
+    <!-- Menú con TODOS los botones + CONTACTO -->
+    <div class="menu">
+        <a href="index.html"><button>INICIO</button></a>
+        <a href="2TiposdeHuerto.html"><button>TIPOS HUERTOS</button></a>
+        <a href="3Caracteristicas.html"><button>CARACTERISTICAS</button></a>
+        <a href="4SelecciondeVegetales.html"><button>SELECCION VEGETALES</button></a>
+        <a href="5CuidadodelosVegetales.html"><button>CUIDADO VEGETALES</button></a>
+        <a href="6MaterialesyRecursos.html"><button>MATERIALES RECURSOS</button></a>
+        <a href="7ProductosaDesarrollar.html"><button>PRODUCTOS</button></a>
+        <a href="8Contacto.html"><button>CONTACTO</button></a> <!-- Botón nuevo -->
+    </div>
+
+    <!-- Contenido de texto -->
+    <div class="contenido-texto">
+
+        <h2>🌿Huertos en macetas</h2>
+        <p>Es un sistema de cultivo que utiliza recipientes individuales fabricados en materiales como arcilla, plástico, fibra o cerámica, con diámetros que van desde 10 hasta más de 35 centímetros, según el tamaño de la planta que se va a cultivar. Son muy prácticos porque se pueden colocar en cualquier lugar —como balcones, terrazas o interiores— y moverse con facilidad para ajustar la exposición al sol o proteger las plantas de condiciones climáticas adversas. Permiten un control sencillo del tipo de tierra, los nutrientes y el riego, pero requieren que se riegue con más frecuencia, ya que la tierra se seca rápido, y es indispensable que tengan orificios en el fondo para que drene el agua y evitar que las raíces se pudran. Son ideales para cultivar hierbas aromáticas, flores, hortalizas pequeñas y plantas decorativas.</p>
+        
+        <div class="contenedor-imagenes">
+            <img src="Imagenes/imagen17.jpg" alt="Ejemplo de Huerto en macetas">
+            <img src="Imagenes/imagen18.jpg" alt="Ejemplo de Huerto en macetas">
+            <img src="Imagenes/imagen19.jpg" alt="Ejemplo de Huerto en macetas">
+        </div>
+
+        <h2>📦Huertos en cajones o cajas</h2>
+        <p>Consiste en estructuras rígidas de forma rectangular o cuadrada, hechas principalmente de madera, plástico, metal o cemento, con alturas de entre 20 y 40 centímetros y anchos que no suelen superar el 1,20 metros para que sea fácil llegar al centro sin inclinarse demasiado. Se pueden colocar en el suelo o elevarse sobre patas, lo que facilita las tareas de cuidado y evita el contacto directo con plagas o malas hierbas del terreno. Permiten sembrar varias especies juntas y retienen mejor la humedad y los nutrientes que las macetas individuales, aunque son pesados y difíciles de trasladar una vez que se han llenado de tierra. Son perfectos para cultivar hortalizas de hoja, de raíz y de fruto, y se adaptan muy bien a espacios reducidos. <strong style="font-weight: bold; color: #5D4037;"> Este fue el tipo de huerto que seleccionamos para sembrar los vegetales y producir nuestros productos.</strong></p>
+        
+        <div class="contenedor-imagenes">
+            <img src="Imagenes/imagen20.jpg" alt="Ejemplo de Huerto en cajones o cajas">
+            <img src="Imagenes/imagen21.jpg" alt="Ejemplo de Huerto en cajones o cajas">
+            <img src="Imagenes/imagen22.jpg" alt="Ejemplo de Huerto en cajones o cajas">
+        </div>
+
+        <h2>↕️Huertos colgantes</h2>
+        <p>Aprovecha el espacio vertical mediante recipientes ligeros —como macetas pequeñas, bolsas de tela, botellas recicladas o cajones livianos— que se cuelgan de techos, vigas, barandillas o paredes con cuerdas, cadenas o soportes resistentes. Es la mejor opción cuando se tiene muy poco espacio disponible, ya que no ocupa superficie en el suelo; además, protege las plantas de plagas que viven en la tierra y aporta un toque decorativo muy atractivo. Sin embargo, la tierra se seca con mucha rapidez por la exposición al aire y al sol, por lo que necesita riegos constantes, y solo sirve para especies de tamaño pequeño o que crecen de forma rastrera o colgante, como fresas, tomates cherry, menta, albahaca y otras hierbas aromáticas.</p>
+        
+        <div class="contenedor-imagenes">
+            <img src="Imagenes/imagen23.jpg" alt="Ejemplo de Huerto colgante">
+            <img src="Imagenes/imagen24.jpg" alt="Ejemplo de Huerto colgante">
+            <img src="Imagenes/imagen25.jpg" alt="Ejemplo de Huerto colgante">
+        </div>
+
+    </div> <!-- Fin contenido-texto -->
+
+</div> <!-- Fin contenedor -->
+
+<!-- SECCIÓN DE DATOS ESCOLARES - PIE DE PÁGINA - INICIO -->
+<!-- Recuadro alineado exactamente al ancho del contenedor blanco, colores en gama verde -->
+<div style="
+    /* Espacio superior para separarlo del contenido */
+    margin-top: 25px;
+    /* Espacio interno igual al resto de recuadros */
+    padding: 12px 20px;
+    /* 🎨 Color de fondo verde muy claro, combina perfecto con el fondo de la página #E8F5E9 */
+    background-color: #E8F5E9;
+    /* Bordes redondeados iguales a todo el diseño */
+    border-radius: 6px;
+    /* 🟩 Bordes laterales en tono verde medio, igual al de los botones y detalles */
+    border-left: 4px solid #66BB6A;
+    border-right: 4px solid #66BB6A;
+    /* Sombra suave coherente con el diseño */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+    /* 📏 ANCHO EXACTO: igual al contenedor principal (1200px), NO SE PASA */
+    max-width: 1200px;
+    width: 100%;
+    /* Centrado perfecto */
+    margin-left: auto;
+    margin-right: auto;
+    /* Texto centrado */
+    text-align: center;
+">
+    <!-- Texto pequeño, color café oscuro igual a subtítulos -->
+    <p style="
+        /* Tamaño pequeño, tipo pie de página */
+        font-size: 12px;
+        /* Espaciado cómodo entre líneas */
+        line-height: 1.5;
+        /* 🎨 Color café oscuro, igual a tus subtítulos */
+        color: #5D4037;
+        /* Grosor normal, elegante */
+        font-weight: normal;
+        /* Quita fondo y bordes heredados del estilo <p> */
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        margin: 0;
+        /* Alineación centrada */
+        text-align: center;
+        /* Ligero espaciado para mejor acabado */
+        letter-spacing: 0.2px;
+    ">
+        Ricardo Márquez Flores - Jesús Amador Romero Miranda<br>
+        Tercer Grado - Grupo II<br>
+        Escuela Preparatoria Oficial Núm. 46<br>
+        San Bartolo Morelos, México, mayo 2026
+    </p>
+</div>
+<!-- SECCIÓN DE DATOS ESCOLARES - PIE DE PÁGINA - FIN -->
+
+</body>
+</html>

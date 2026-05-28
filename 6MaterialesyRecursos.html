@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>MATERIALESYRECURSOS</title>
+    <style>
+        /* -------------------------- ESTILO GENERAL -------------------------- */
+        body{
+            background-color: #E8F5E9;
+            font-family: "Segoe UI", Roboto, sans-serif;
+            margin: 0px;
+            padding: 20px;
+        }
+
+        /* -------------------------- CONTENEDOR PRINCIPAL -------------------------- */
+        .contenedor{
+            text-align: center;
+            max-width: 1200px;
+            margin: auto;
+            background-color: rgba(255,255,255,0.85);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        /* -------------------------- LOGO EN ESQUINA -------------------------- */
+        .logo-esquina{
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            width: 140px;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #66BB6A;
+            background-color: white;
+            padding: 4px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .logo-esquina:hover{
+            transform: scale(1.05);
+        }
+
+        /* -------------------------- TÍTULO PRINCIPAL -------------------------- */
+        h1{
+            color: #2E7D32;
+            font-size: 48px;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            padding-bottom: 10px;
+            border-bottom: 4px solid #FF9800;
+            margin: 40px auto 30px auto;
+            display: inline-block;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+        }
+
+        /* -------------------------- SUBTÍTULOS H2 -------------------------- */
+        h2{
+            color: #5D4037;
+            font-size: 28px;
+            text-align: left;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+            padding: 10px 0;
+            border-bottom: 3px solid #81C783;
+            width: fit-content;
+            margin-left: 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* -------------------------- MENÚ DE NAVEGACIÓN -------------------------- */
+        .menu{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: nowrap;
+            gap: 8px;
+            margin: 20px auto 53px auto;
+            padding: 8px 15px;
+            background-color: rgba(121, 85, 72, 0.1);
+            border-radius: 15px;
+            width: fit-content;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.09); 
+        }
+
+        /* -------------------------- BOTONES -------------------------- */
+        button{
+            width: 125px;
+            height: 42px;
+            font-size: 12px;
+            font-weight: bold;
+            color: white;
+            background-color: #66BB6A;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+            transition: all 0.3s ease;
+        }
+
+        button:hover{
+            background-color: #FF9800;
+            transform: translateY(-2px);
+        }
+
+        /* -------------------------- CONTENIDO DE TEXTO -------------------------- */
+        .contenido-texto{
+            text-align: left;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* -------------------------- CONTENEDOR PRINCIPAL -------------------------- */
+        .contenedor-principal{
+            margin: 25px 0;
+        }
+
+        /* -------------------------- CONTENEDOR DE IMÁGENES HORIZONTAL -------------------------- */
+        .contenedor-imagenes-horizontal{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .contenedor-imagenes-horizontal img{
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            border: 3px solid #C8E6C9;
+            transition: transform 0.3s ease;
+        }
+
+        .contenedor-imagenes-horizontal img:hover{
+            transform: scale(1.05);
+        }
+
+        /* -------------------------- PÁRRAFOS (ESTILO IGUAL A LA OTRA PÁGINA) -------------------------- */
+        p{
+            font-size: 18px;
+            line-height: 1.7;
+            color: #333333;
+            text-align: justify;
+            padding: 20px;
+            background-color: #fcf8dc;
+            border-radius: 4px;
+            margin: 15px 0;
+            border-left: 4px solid #ff9800;
+            border-right: none;
+            border-top: none;
+            border-bottom: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+
+        <!-- LOGO CON EFECTO -->
+        <img src="Imagenes/imagen52.jpeg" alt="Logo" class="logo-esquina">
+
+        <h1>MATERIALES Y RECURSOS</h1>
+        
+        <!-- MENÚ COMPLETO CON CONTACTO -->
+        <div class="menu">
+            <a href="index.html"><button>INICIO</button></a>
+            <a href="2TiposdeHuerto.html"><button>TIPOS HUERTOS</button></a>
+            <a href="3Caracteristicas.html"><button>CARACTERISTICAS</button></a>
+            <a href="4SelecciondeVegetales.html"><button>SELECCION VEGETALES</button></a>
+            <a href="5CuidadodelosVegetales.html"><button>CUIDADO VEGETALES</button></a>
+            <a href="6MaterialesyRecursos.html"><button>MATERIALES RECURSOS</button></a>
+            <a href="7ProductosaDesarrollar.html"><button>PRODUCTOS</button></a>
+            <a href="8Contacto.html"><button>CONTACTO</button></a>
+        </div>
+
+        <div class="contenido-texto">
+            <h2>🔨¿Qué necesitamos para sembrar?</h2>
+
+            <div class="contenedor-principal">
+                <p>Para sembrar zanahoria, cilantro y espinaca se requieren los siguientes recursos y materiales, teniendo en cuenta que el lugar destinado para su cultivo serán las cajas de madera: semillas de cada una de estas especies, tierra fértil y suelta mezclada con sustrato vegetal que aporte los nutrientes necesarios, garantice una buena aireación y permita que el agua drene correctamente para evitar encharcamientos que puedan dañar las raíces, agua limpia y accesible en cantidad suficiente para mantener la humedad adecuada del suelo durante todas las etapas de crecimiento, desde la germinación hasta la cosecha, cajas de madera resistentes que servirán como el espacio principal donde se desarrollarán las plantas, con una profundidad apropiada especialmente para las zanahorias que crecen bajo tierra, bolsas de plástico que se utilizan para forrar el interior de las cajas de madera y evitar que la tierra se salga por los espacios o grietas de la madera, herramientas básicas como una pala pequeña o azadón para preparar y remover la tierra dentro de las cajas, una regadera o manguera con salida de agua suave para realizar los riegos de forma uniforme sin desplazar las semillas ni dañar las plántulas, además de materiales como guantes de trabajo para proteger las manos durante las labores.</p>
+
+                <!-- Imágenes al final, en disposición horizontal -->
+                <div class="contenedor-imagenes-horizontal">
+                    <img src="Imagenes/imagen40.jpg" alt="Ejemplo de materiales y recursos">
+                    <img src="Imagenes/imagen41.jpg" alt="Ejemplo de materiales y recursos">
+                    <img src="Imagenes/imagen42.jpg" alt="Ejemplo de materiales y recursos">
+                    <img src="Imagenes/imagen43.jpg" alt="Ejemplo de materiales y recursos">
+                    <img src="Imagenes/imagen44.jpg" alt="Ejemplo de materiales y recursos">
+                    <img src="Imagenes/imagen45.jpg" alt="Ejemplo de materiales y recursos">
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- SECCIÓN DE DATOS ESCOLARES - PIE DE PÁGINA - INICIO -->
+<!-- Recuadro alineado exactamente al ancho del contenedor blanco, colores en gama verde -->
+<div style="
+    /* Espacio superior para separarlo del contenido */
+    margin-top: 25px;
+    /* Espacio interno igual al resto de recuadros */
+    padding: 12px 20px;
+    /* 🎨 Color de fondo verde muy claro, combina perfecto con el fondo de la página #E8F5E9 */
+    background-color: #E8F5E9;
+    /* Bordes redondeados iguales a todo el diseño */
+    border-radius: 6px;
+    /* 🟩 Bordes laterales en tono verde medio, igual al de los botones y detalles */
+    border-left: 4px solid #66BB6A;
+    border-right: 4px solid #66BB6A;
+    /* Sombra suave coherente con el diseño */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+    /* 📏 ANCHO EXACTO: igual al contenedor principal (1200px), NO SE PASA */
+    max-width: 1200px;
+    width: 100%;
+    /* Centrado perfecto */
+    margin-left: auto;
+    margin-right: auto;
+    /* Texto centrado */
+    text-align: center;
+">
+    <!-- Texto pequeño, color café oscuro igual a subtítulos -->
+    <p style="
+        /* Tamaño pequeño, tipo pie de página */
+        font-size: 12px;
+        /* Espaciado cómodo entre líneas */
+        line-height: 1.5;
+        /* 🎨 Color café oscuro, igual a tus subtítulos */
+        color: #5D4037;
+        /* Grosor normal, elegante */
+        font-weight: normal;
+        /* Quita fondo y bordes heredados del estilo <p> */
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        margin: 0;
+        /* Alineación centrada */
+        text-align: center;
+        /* Ligero espaciado para mejor acabado */
+        letter-spacing: 0.2px;
+    ">
+        Ricardo Márquez Flores - Jesús Amador Romero Miranda<br>
+        Tercer Grado - Grupo II<br>
+        Escuela Preparatoria Oficial Núm. 46<br>
+        San Bartolo Morelos, México, mayo 2026
+    </p>
+</div>
+<!-- SECCIÓN DE DATOS ESCOLARES - PIE DE PÁGINA - FIN -->
+
+</body>
+</html>

@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>PRODUCTOSADESARROLLAR</title>
+    <style>
+        /* -------------------------- ESTILO GENERAL -------------------------- */
+        body{
+            background-color: #E8F5E9;
+            font-family: "Segoe UI", Roboto, sans-serif;
+            margin: 0px;
+            padding: 20px;
+        }
+
+        /* -------------------------- CONTENEDOR PRINCIPAL -------------------------- */
+        .contenedor{
+            text-align: center;
+            max-width: 1200px;
+            margin: auto;
+            background-color: rgba(255,255,255,0.85); /* ✅ Igual al otro código */
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* ✅ Igual al otro código */
+            position: relative;
+        }
+
+        /* -------------------------- LOGO EN ESQUINA -------------------------- */
+        .logo-esquina{
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            width: 140px;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #66BB6A;
+            background-color: white;
+            padding: 4px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .logo-esquina:hover{
+            transform: scale(1.05);
+        }
+
+        /* -------------------------- TÍTULO PRINCIPAL -------------------------- */
+        h1{
+            color: #2E7D32;
+            font-size: 48px;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1); /* ✅ Igual al otro código */
+            padding-bottom: 10px; /* ✅ Espacio igual */
+            border-bottom: 4px solid #FF9800; /* ✅ Grosor 4px, igual que el otro */
+            margin: 40px auto 30px auto;
+            display: inline-block;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            /* ❌ Eliminado width:75% para que se ajuste solo al texto como en el otro */
+        }
+
+        /* -------------------------- SUBTÍTULOS H2 -------------------------- */
+        h2{
+            color: #5D4037;
+            font-size: 28px;
+            text-align: left;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.1); /* ✅ Igual al otro código */
+            padding: 10px 0;
+            border-bottom: 3px solid #81C783;
+            width: fit-content;
+            margin-left: 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* -------------------------- SUBTÍTULOS H3 -------------------------- */
+        h3{
+            color: #D3783F;
+            font-size: 22px;
+            text-align: left;
+            font-weight: bold;
+            padding: 8px 0;
+            border-bottom: 2px solid #C8E6C9;
+            width: fit-content;
+            margin: 30px 0 10px 0;
+        }
+
+        /* -------------------------- MENÚ DE NAVEGACIÓN -------------------------- */
+        .menu{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: nowrap;
+            gap: 8px;
+            margin: 20px auto 53px auto; /* ✅ Margen inferior 53px igual */
+            padding: 8px 15px; /* ✅ Relleno igual */
+            background-color: rgba(121, 85, 72, 0.1); /* ✅ Fondo semitransparente igual */
+            border-radius: 15px; /* ✅ Bordes redondos 15px igual */
+            width: fit-content; /* ✅ Ancho justo igual */
+            box-shadow: 0 2px 6px rgba(0,0,0,0.09); /* ✅ Sombra exacta igual */
+            box-sizing: border-box;
+        }
+
+        /* -------------------------- BOTONES -------------------------- */
+        button{
+            width: 125px;
+            height: 42px;
+            font-size: 12px;
+            font-weight: bold;
+            color: white;
+            background-color: #66BB6A;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.15); /* ✅ Sombra en botones igual */
+            transition: all 0.3s ease;
+        }
+
+        button:hover{
+            background-color: #FF9800;
+            transform: translateY(-2px);
+        }
+
+        /* -------------------------- CONTENIDO DE TEXTO -------------------------- */
+        .contenido-texto{
+            text-align: left;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* -------------------------- CONTENEDOR PRINCIPAL -------------------------- */
+        .contenedor-principal{
+            margin: 25px 0;
+        }
+
+        /* -------------------------- CONTENEDOR DE IMÁGENES HORIZONTAL -------------------------- */
+        .contenedor-imagenes-horizontal{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: nowrap;
+            gap: 15px;
+            margin-top: 30px;
+            overflow-x: auto;
+            padding: 10px 0;
+        }
+
+        .contenedor-imagenes-horizontal img{
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* ✅ Sombra en imágenes igual */
+            border: 3px solid #C8E6C9;
+            transition: transform 0.3s ease;
+        }
+
+        .contenedor-imagenes-horizontal img:hover{
+            transform: scale(1.05);
+        }
+
+        /* -------------------------- ESTILO TEXTO INTRODUCTORIO -------------------------- */
+        .texto-introductorio{
+            font-size: 18px;
+            line-height: 1.7;
+            color: #333333;
+            text-align: justify;
+            padding: 20px;
+            background-color: #fcf8dc; /* ✅ Color de fondo igual al otro código */
+            border-radius: 4px;
+            margin: 15px 0;
+            border-left: 4px solid #ff9800; /* ✅ Borde izquierdo igual */
+            border-right: none;
+            border-top: none;
+            border-bottom: none;
+        }
+
+        /* -------------------------- PÁRRAFOS -------------------------- */
+        p{
+            font-size: 18px;
+            line-height: 1.7;
+            color: #333333;
+            text-align: justify;
+            padding: 20px;
+            background-color: #fcf8dc; /* ✅ Igual al otro código */
+            border-radius: 4px;
+            margin: 15px 0;
+            border-left: 4px solid #ff9800;
+            border-right: none;
+            border-top: none;
+            border-bottom: none;
+        }
+
+        /* -------------------------- ESTILO TABLA NUTRICIONAL -------------------------- */
+        .tabla-nutricional {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 30px 0;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 6px 18px rgba(139, 94, 59, 0.15);
+            background-color: #ffffff;
+            font-family: "Segoe UI", Roboto, sans-serif;
+            border: 2px solid #D7CCC8;
+        }
+
+        .tabla-nutricional caption {
+            background-color: #A1887F;
+            color: #FFF8E1;
+            font-size: 21px;
+            font-weight: bold;
+            padding: 15px;
+            letter-spacing: 0.5px;
+        }
+
+        .tabla-nutricional th {
+            background-color: #EFEBE9;
+            color: #8D6E63;
+            font-size: 16px;
+            padding: 16px 10px;
+            text-align: center;
+            border-bottom: 2px solid #D7CCC8;
+            border-right: 1px solid #D7CCC8;
+            font-weight: 600;
+        }
+        
+        .tabla-nutricional th:last-child { border-right: none; }
+
+        .tabla-nutricional td {
+            padding: 18px 12px;
+            text-align: center;
+            font-size: 15px;
+            color: #5D4037;
+            border-bottom: 1px solid #E8DED2;
+            border-right: 1px solid #E8DED2;
+            line-height: 1.6;
+            transition: all 0.3s ease;
+        }
+        
+        .tabla-nutricional td:last-child { border-right: none; }
+        .tabla-nutricional tr:last-child td { border-bottom: none; }
+
+        .tabla-nutricional tr:nth-child(even) { background-color: #FAF6F2; }
+        .tabla-nutricional tr:nth-child(odd)  { background-color: #FFFDFB; }
+
+        .tabla-nutricional .fila-titulo {
+            color: #BC7A45;
+            font-weight: bold;
+            background-color: #F5EEE6;
+            border-right: 2px solid #D7CCC8;
+            font-size: 15.5px;
+        }
+
+        .tabla-nutricional tr:hover td {
+            background-color: #FFE0B2 !important;
+            color: #4E342E;
+            transform: translateY(-2px);
+            box-shadow: inset 0 0 0 2px #FFB74D;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="contenedor">
+
+        <!-- LOGO CON EFECTO -->
+        <img src="Imagenes/imagen52.jpeg" alt="Logo" class="logo-esquina">
+
+        <h1>PRODUCTOS A DESARROLLAR</h1>
+        
+        <!-- MENÚ COMPLETO CON CONTACTO -->
+        <div class="menu">
+            <a href="index.html"><button>INICIO</button></a>
+            <a href="2TiposdeHuerto.html"><button>TIPOS HUERTOS</button></a>
+            <a href="3Caracteristicas.html"><button>CARACTERISTICAS</button></a>
+            <a href="4SelecciondeVegetales.html"><button>SELECCION VEGETALES</button></a>
+            <a href="5CuidadodelosVegetales.html"><button>CUIDADO VEGETALES</button></a>
+            <a href="6MaterialesyRecursos.html"><button>MATERIALES RECURSOS</button></a>
+            <a href="7ProductosaDesarrollar.html"><button>PRODUCTOS</button></a>
+            <a href="8Contacto.html"><button>CONTACTO</button></a>
+        </div>
+
+        <div class="contenido-texto">
+            <h2>👨‍🍳👩‍🍳¡A cocinar!</h2>
+
+            <p class="texto-introductorio">
+                Nosotros decidimos trabajar la zanahoria (nuestra materia prima) en postres porque es una excelente elección que aporta dulzura natural, lo que permite reducir la cantidad de azúcares añadidos y obtener preparaciones más sanas y nutritivas. Además, al ser un ingrediente accesible, fácil de cultivar y muy versátil, se adapta a recetas muy variadas, aportando también vitaminas, fibra y un sabor delicioso que sorprende gratamente a quienes los prueban.</p>
+
+            <!-- Imágenes alineadas horizontalmente -->
+            <div class="contenedor-imagenes-horizontal">
+                <img src="Imagenes/imagen51.jpeg" alt="Ejemplo de producto">
+                <img src="Imagenes/imagen49.jpeg" alt="Ejemplo de producto">
+                <img src="Imagenes/imagen50.jpeg" alt="Ejemplo de producto">
+            </div>
+
+            <div class="contenedor-principal">
+                <h3>🍰Pastel de zanahoria</h3>
+                <p>El pastel de zanahoria es una opción viable para la comunidad porque aprovecha un cultivo que se puede sembrar fácilmente en espacios reducidos como huertos en cajas o macetas, lo que permite que cualquier persona o familia pueda obtener el ingrediente principal sin necesidad de grandes extensiones de terreno. Al producir la zanahoria de forma local y comunitaria, se reducen los costos de adquisición de los alimentos, se fomenta la colaboración entre vecinos y se convierte en una alternativa nutritiva y deliciosa que puede compartirse en reuniones, celebraciones o incluso comercializarse como producto elaborado, generando pequeños ingresos para las familias. En cuanto al impacto ambiental, sembrar nuestras propias zanahorias disminuye la necesidad de transportar estos alimentos desde zonas lejanas, lo que reduce la emisión de gases contaminantes derivados del traslado. Además, al realizar el cultivo con métodos naturales y abonos orgánicos, se evita el uso excesivo de químicos que dañan el suelo y las fuentes de agua, contribuyendo a mantener el equilibrio del ecosistema, proteger la biodiversidad y obtener alimentos más sanos y libres de residuos tóxicos.</p>
+                
+                <h3>🥛Atole de zanahoria</h3>
+                <p>El atole de zanahoria es una preparación muy viable para la comunidad porque es una bebida tradicional, accesible y muy apreciada, que aprovecha las propiedades nutritivas de la zanahoria para ofrecer un alimento que aporta energía y vitaminas a bajo costo. Al sembrar la zanahoria de forma colectiva, se fomenta el trabajo en equipo, se comparten conocimientos sobre cultivo y cuidado de las plantas, y se garantiza el abastecimiento constante del ingrediente, lo que hace que esta bebida pueda estar al alcance de todos, independientemente de su condición económica. También puede ser una excelente alternativa para promover la alimentación saludable entre niños y adultos, incorporando vegetales de forma creativa y agradable. Respecto al impacto ambiental, cultivar nuestras propias zanahorias ayuda a reducir la huella de carbono asociada a la producción y distribución comercial de alimentos, ya que eliminamos procesos industriales que consumen gran cantidad de energía y recursos. Asimismo, al realizar el cultivo de manera responsable, se mejora la calidad del suelo al reponer sus nutrientes de forma natural, se evita la contaminación de ríos y suelos por el uso de fertilizantes y pesticidas sintéticos, y se promueve el uso racional del agua, fomentando prácticas de riego que cuidan este recurso tan valioso.</p>
+                
+                <h3>🍦Helado de zanahoria</h3>
+                <p>El helado de zanahoria es una propuesta viable para la comunidad porque representa una forma innovadora y deliciosa de consumir este vegetal, logrando que incluso quienes no suelen comerlo lo disfruten como un postre fresco y nutritivo. Al sembrar la zanahoria de forma local, se asegura la disponibilidad constante del ingrediente principal, se reducen los gastos de producción y se convierte en una opción ideal para ofrecer en eventos, ferias locales o emprendimientos familiares, generando oportunidades de desarrollo económico y fortaleciendo la economía de la zona. Además, fomenta hábitos de alimentación saludable al combinar el placer de comer un postre con los beneficios nutricionales de la zanahoria. En lo que respecta al impacto ambiental, cultivar nuestras propias zanahorias contribuye a la conservación del medio ambiente al evitar el uso de envases y empaques plásticos que se utilizan en la comercialización de alimentos procesados. También ayuda a reducir la degradación de los suelos, ya que al emplear técnicas de cultivo orgánico se preserva su fertilidad a largo plazo, y se disminuye la presión sobre las zonas agrícolas extensivas que suelen provocar deforestación y pérdida de hábitats naturales. De esta manera, obtenemos alimentos sanos y al mismo tiempo cuidamos el entorno en el que vivimos.</p>
+                
+                <!-- TABLA CON BORDES CURVOS, PALETA BEIGE Y EFECTOS -->
+                <table class="tabla-nutricional">
+                    <caption>📊 Información nutrimental de nuestros productos (por cada 100g)</caption>
+                    <thead>
+                        <tr>
+                            <th>Componente</th>
+                            <th>🥕 Pastel de zanahoria</th>
+                            <th>🥛 Atole de zanahoria</th>
+                            <th>🍦 Helado de zanahoria</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="fila-titulo">Energía</td>
+                            <td>373 kcal</td>
+                            <td>91 kcal</td>
+                            <td>96 kcal</td>
+                        </tr>
+                        <tr>
+                            <td class="fila-titulo">Proteínas</td>
+                            <td>2.5 g</td>
+                            <td>1.6 g</td>
+                            <td>1.9 g</td>
+                        </tr>
+                        <tr>
+                            <td class="fila-titulo">Carbohidratos</td>
+                            <td>51.7 g<br></td>
+                            <td>20 g</td>
+                            <td>23 g</td>
+                        </tr>
+                        <tr>
+                            <td class="fila-titulo">Grasas</td>
+                            <td>17.5 g</td>
+                            <td>0.4 g</td>
+                            <td>3.6 g</td>
+                        </tr>
+                        <tr>
+                            <td class="fila-titulo">Vitaminas</td>
+                            <td>Vitamina A (100 µg),<br>Vitamina E (2.5 mg),<br>Ácido fólico (10 µg)</td>
+                            <td>Vitamina A (525 µg),<br>Vitamina C (4 mg)</td>
+                            <td>Vitamina A (380 µg),<br>Vitamina C (2.8 mg)</td>
+                        </tr>
+                        <tr>
+                            <td class="fila-titulo">Minerales</td>
+                            <td>Sodio (142 mg),<br>Calcio (38 mg),<br>Fósforo (72 mg)</td>
+                            <td>Calcio (47 mg),<br>Potasio (120 mg),<br>Sodio (39 mg)</td>
+                            <td>Calcio (70 mg),<br>Fósforo (52 mg),<br>Potasio (102 mg)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+        </div>
+    </div>
+
+<!-- SECCIÓN DE DATOS ESCOLARES - PIE DE PÁGINA - INICIO -->
+<!-- Recuadro alineado exactamente al ancho del contenedor blanco, colores en gama verde -->
+<div style="
+    /* Espacio superior para separarlo del contenido */
+    margin-top: 25px;
+    /* Espacio interno igual al resto de recuadros */
+    padding: 12px 20px;
+    /* 🎨 Color de fondo verde muy claro, combina perfecto con el fondo de la página #E8F5E9 */
+    background-color: #E8F5E9;
+    /* Bordes redondeados iguales a todo el diseño */
+    border-radius: 6px;
+    /* 🟩 Bordes laterales en tono verde medio, igual al de los botones y detalles */
+    border-left: 4px solid #66BB6A;
+    border-right: 4px solid #66BB6A;
+    /* Sombra suave coherente con el diseño */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+    /* 📏 ANCHO EXACTO: igual al contenedor principal (1200px), NO SE PASA */
+    max-width: 1200px;
+    width: 100%;
+    /* Centrado perfecto */
+    margin-left: auto;
+    margin-right: auto;
+    /* Texto centrado */
+    text-align: center;
+">
+    <!-- Texto pequeño, color café oscuro igual a subtítulos -->
+    <p style="
+        /* Tamaño pequeño, tipo pie de página */
+        font-size: 12px;
+        /* Espaciado cómodo entre líneas */
+        line-height: 1.5;
+        /* 🎨 Color café oscuro, igual a tus subtítulos */
+        color: #5D4037;
+        /* Grosor normal, elegante */
+        font-weight: normal;
+        /* Quita fondo y bordes heredados del estilo <p> */
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        margin: 0;
+        /* Alineación centrada */
+        text-align: center;
+        /* Ligero espaciado para mejor acabado */
+        letter-spacing: 0.2px;
+    ">
+        Ricardo Márquez Flores - Jesús Amador Romero Miranda<br>
+        Tercer Grado - Grupo II<br>
+        Escuela Preparatoria Oficial Núm. 46<br>
+        San Bartolo Morelos, México, mayo 2026
+    </p>
+</div>
+<!-- SECCIÓN DE DATOS ESCOLARES - PIE DE PÁGINA - FIN -->
+
+</body>
+</html>

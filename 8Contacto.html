@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Configuración básica del documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACTO - SEMBRANDO VIDA</title>
+    <style>
+        /* -------------------------- ESTILO GENERAL DEL CUERPO -------------------------- */
+        body{
+            background-color: #E8F5E9; /* Color de fondo verde claro */
+            font-family: "Segoe UI", Roboto, sans-serif; /* Fuente legible y moderna */
+            margin: 0px; /* Sin margen exterior */
+            padding: 20px; /* Espacio interior alrededor del contenido */
+        }
+
+        /* -------------------------- CONTENEDOR PRINCIPAL CENTRAL -------------------------- */
+        .contenedor{
+            text-align: center; /* Alineación de contenido al centro */
+            max-width: 1200px; /* Ancho máximo para pantallas grandes */
+            margin: auto; /* Centra el contenedor horizontalmente */
+            background-color: rgba(255,255,255,0.85); /* Fondo blanco semitransparente */
+            padding: 30px; /* Espacio interior amplio */
+            border-radius: 20px; /* Bordes redondeados suaves */
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Sombra suave para profundidad */
+            position: relative; /* Para posicionar elementos internos de forma relativa */
+        }
+
+        /* -------------------------- LOGO EN LA ESQUINA SUPERIOR -------------------------- */
+        .logo-esquina{
+            position: absolute; /* Posición fija respecto al contenedor */
+            top: 15px; /* Distancia desde arriba */
+            left: 15px; /* Distancia desde la izquierda */
+            width: 140px; /* Ancho definido */
+            height: 140px; /* Alto definido */
+            object-fit: cover; /* Ajusta imagen sin deformarla */
+            border-radius: 50%; /* Forma circular */
+            border: 4px solid #66BB6A; /* Borde verde alrededor del logo */
+            background-color: white; /* Fondo blanco detrás de la imagen */
+            padding: 4px; /* Espacio entre imagen y borde */
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1); /* Sombra ligera */
+            transition: transform 0.3s ease; /* ✅ Efecto suave para la animación */
+        }
+
+        /* ✅ EFECTO: Mover/agrandar logo al pasar el mouse */
+        .logo-esquina:hover{
+            transform: scale(1.05); /* Aumenta tamaño ligeramente */
+        }
+
+        /* -------------------------- TÍTULO PRINCIPAL -------------------------- */
+        h1{
+            color: #2E7D32; /* Color verde oscuro */
+            font-size: 48px; /* Tamaño grande y destacado */
+            text-align: center; /* Texto centrado */
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1); /* Sombra de texto sutil */
+            padding-bottom: 10px; /* Espacio debajo del texto */
+            border-bottom: 4px solid #FF9800; /* Línea naranja gruesa debajo */
+            margin: 40px auto 30px auto; /* Márgenes superior e inferior */
+            display: inline-block; /* Ajusta ancho solo al contenido */
+            font-weight: bold; /* Texto en negrita */
+            letter-spacing: 1.5px; /* Espaciado entre letras */
+        }
+
+        /* -------------------------- SUBTÍTULOS NIVEL 2 -------------------------- */
+        h2{
+            color: #5D4037; /* Color café oscuro */
+            font-size: 28px; /* Tamaño mediano */
+            text-align: left; /* Alineación a la izquierda */
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.1); /* Sombra suave */
+            padding: 10px 0; /* Espacio vertical interno */
+            border-bottom: 3px solid #81C783; /* Línea verde media debajo */
+            width: fit-content; /* Ancho según contenido */
+            margin-left: 0; /* Sin margen izquierdo */
+            display: flex; /* ✅ Alineación de icono y texto igual al primer código */
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* -------------------------- MENÚ DE NAVEGACIÓN PRINCIPAL -------------------------- */
+        .menu{
+            display: flex; /* Disposición horizontal de botones */
+            align-items: center; /* Alineación vertical al centro */
+            justify-content: center; /* Centrado horizontal */
+            flex-wrap: nowrap; /* Evita que los botones bajen de línea */
+            gap: 8px; /* Espacio entre cada botón */
+            margin: 20px auto 53px auto; /* ✅ Margen inferior exacto del primer código */
+            padding: 8px 15px; /* ✅ Relleno igual */
+            background-color: rgba(121, 85, 72, 0.1); /* ✅ Fondo semitransparente igual */
+            border-radius: 15px; /* ✅ Bordes redondeados iguales */
+            width: fit-content; /* ✅ Ancho ajustado al contenido */
+            box-shadow: 0 2px 6px rgba(0,0,0,0.09); /* ✅ Sombra idéntica */
+            box-sizing: border-box;
+        }
+
+        /* -------------------------- ESTILO DE LOS BOTONES -------------------------- */
+        button{
+            width: 125px; /* Ancho fijo para todos */
+            height: 42px; /* Alto fijo para todos */
+            font-size: 12px; /* Tamaño de letra */
+            font-weight: bold; /* Texto en negrita */
+            color: white; /* Texto blanco */
+            background-color: #66BB6A; /* Fondo verde */
+            border: none; /* Sin borde externo */
+            border-radius: 8px; /* Bordes redondeados */
+            cursor: pointer; /* Cambia cursor a mano al pasar */
+            box-shadow: 0 3px 6px rgba(0,0,0,0.15); /* Sombra de botón */
+            transition: all 0.3s ease; /* Animación suave en cambios */
+        }
+
+        /* Efecto al pasar el mouse sobre botones */
+        button:hover{
+            background-color: #FF9800; /* Cambia a color naranja */
+            transform: translateY(-2px); /* Se eleva ligeramente */
+        }
+
+        /* -------------------------- CONTENEDOR DEL FORMULARIO -------------------------- */
+        .contenedor-formulario {
+            background-color: #FFF8E1; /* Fondo color crema claro */
+            border-radius: 18px; /* Bordes muy redondeados */
+            border-left: 5px solid #FF9800; /* Borde izquierdo naranja grueso */
+            border-right: 5px solid #FF9800; /* Borde derecho naranja grueso */
+            padding: 25px 30px; /* Espacio interior amplio */
+            margin: 30px auto; /* Margen arriba y abajo, centrado */
+            box-shadow: inset 0 0 8px rgba(255, 152, 0, 0.1); /* Sombra interna naranja suave */
+            width: 90%; /* ✅ Ancho igual al primer código */
+            max-width: 900px; /* ✅ Máximo igual al primer código */
+            box-sizing: border-box;
+        }
+
+        /* Título dentro del formulario */
+        .contenedor-formulario h3 {
+            color: #5D4037; /* Color café */
+            text-align: center; /* Centrado */
+            font-size: 22px; /* Tamaño de letra */
+            border-bottom: 2px solid #FFCC80; /* Línea naranja pálida debajo */
+            padding-bottom: 10px; /* Espacio debajo del texto */
+            margin-top: 0; /* Sin margen superior */
+            font-weight: bold;
+        }
+
+        /* -------------------------- INDICADOR DE CAMPO OBLIGATORIO -------------------------- */
+        .obligatorio {
+            color: #D32F2F; /* Color rojo para resaltar */
+            font-weight: bold; /* Negrita */
+        }
+
+        /* -------------------------- ESTRUCTURA GENERAL DEL FORMULARIO -------------------------- */
+        .formulario-opinion {
+            display: flex; /* Disposición vertical */
+            flex-direction: column; /* Apila elementos uno debajo de otro */
+            gap: 20px; /* Espacio entre campos */
+            margin-top: 20px; /* Espacio superior */
+        }
+
+        /* -------------------------- CADA CAMPO INDIVIDUAL -------------------------- */
+        .campo-formulario {
+            display: flex; /* Disposición vertical */
+            flex-direction: column; /* Etiqueta arriba, entrada abajo */
+            gap: 8px; /* Espacio entre etiqueta y entrada */
+        }
+
+        /* Estilo de las etiquetas de cada campo */
+        .campo-formulario label {
+            color: #8D6E63; /* Color café grisáceo */
+            font-weight: 600; /* Semi-negrita */
+            font-size: 17px; /* Tamaño de letra */
+            text-align: left; /* Alineación a la izquierda */
+        }
+
+        /* Estilo para entradas de texto, listas y áreas de texto */
+        .campo-formulario input,
+        .campo-formulario select,
+        .campo-formulario textarea {
+            padding: 12px 15px; /* Espacio interior cómodo */
+            border: 1px solid #D7CCC8; /* Borde café muy claro */
+            border-radius: 10px; /* Bordes redondeados */
+            background-color: #FFFFFF; /* Fondo blanco */
+            color: #4E342E; /* Color de texto café oscuro */
+            font-size: 16px; /* Tamaño de letra */
+            font-family: inherit; /* Hereda fuente del documento */
+            box-sizing: border-box; /* Padding no modifica el ancho total */
+        }
+
+        /* Bloquea el cambio de tamaño manual en cuadros de texto */
+        .campo-formulario textarea {
+            resize: none; /* Desactiva control de arrastre para cambiar tamaño */
+        }
+
+        /* Resaltado al hacer clic en un campo */
+        .campo-formulario input:focus,
+        .campo-formulario select:focus,
+        .campo-formulario textarea:focus {
+            outline: none; /* Quita borde predeterminado del navegador */
+            border-color: #FF9800; /* Cambia borde a naranja */
+            box-shadow: 0 0 0 3px rgba(255, 152, 0, 0.15); /* Resplandor naranja suave */
+        }
+
+        /* -------------------------- CONTENEDOR DEL BOTÓN DE ENVÍO -------------------------- */
+        .boton-enviar {
+            text-align: center; /* Centra el botón */
+            margin-top: 15px; /* Espacio superior */
+            margin-bottom: 10px; /* Espacio inferior */
+        }
+
+        /* Estilo propio del botón de enviar */
+        .boton-enviar button {
+            background-color: #4CAF50; /* Color verde diferente al menú */
+            color: white; /* Texto blanco */
+            font-size: 16px; /* Tamaño de letra mayor */
+            font-weight: bold; /* Negrita */
+            padding: 12px 40px; /* Relleno horizontal amplio */
+            border: none; /* Sin borde */
+            border-radius: 8px; /* Bordes redondeados iguales a otros botones */
+            cursor: pointer; /* Manita al pasar */
+            transition: all 0.3s ease; /* Animación suave */
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1); /* Sombra ligera */
+            min-width: 160px; /* Ancho mínimo para que se vea bien */
+            line-height: 1.2; /* Altura de línea adecuada */
+        }
+
+        /* Efecto al pasar el mouse en botón de enviar */
+        .boton-enviar button:hover {
+            background-color: #FF9800; /* Cambia a naranja */
+            transform: translateY(-2px); /* Se eleva */
+        }
+
+        /* -------------------------- TEXTO FINAL INFORMATIVO -------------------------- */
+        .texto-final{
+            font-size: 20px; /* Tamaño grande y legible */
+            line-height: 1.4; /* Espaciado entre líneas moderado */
+            color: #5D4037; /* Color café */
+            font-weight: bold; /* Negrita */
+            text-align: center; /* Centrado */
+            padding: 20px 30px; /* Espacio interior */
+            margin: 30px auto 20px auto; /* ✅ Centrado igual que el formulario */
+            background-color: #FFF8E1; /* Fondo crema */
+            border-radius: 18px; /* ✅ Mismo radio que el formulario */
+            border-left: 5px solid #FF9800; /* ✅ Mismo borde izquierdo */
+            border-right: 5px solid #FF9800; /* ✅ Mismo borde derecho */
+            box-shadow: inset 0 0 8px rgba(255, 152, 0, 0.1); /* ✅ Misma sombra interna */
+            width: 90%; /* ✅ MISMO ANCHO que el formulario */
+            max-width: 900px; /* ✅ MISMO MÁXIMO que el formulario */
+            box-sizing: border-box; /* Para que el padding no rompa el tamaño */
+        }
+
+        /* -------------------------- CONTENEDOR DE IMÁGENES HORIZONTALES -------------------------- */
+        .contenedor-imagenes-horizontal{
+            display: flex; /* Disposición en línea */
+            justify-content: center; /* Centrado */
+            align-items: center; /* Alineación vertical */
+            flex-wrap: wrap; /* Permite salto de línea si es necesario */
+            gap: 15px; /* Espacio entre imágenes */
+            margin: 20px 0 30px 0; /* Márgenes verticales */
+        }
+
+        /* Estilo para cada imagen dentro del contenedor */
+        .contenedor-imagenes-horizontal img{
+            width: 310px; /* Ancho definido */
+            height: 210px; /* Alto definido */
+            object-fit: cover; /* Ajuste sin deformidad */
+            border-radius: 12px; /* Bordes redondeados */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* Sombra de imagen */
+            border: 4px solid #C8E6C9; /* Borde verde claro */
+            transition: transform 0.3s ease; /* Animación suave */
+        }
+
+        /* Efecto al pasar el mouse sobre imágenes */
+        .contenedor-imagenes-horizontal img:hover{
+            transform: scale(1.05); /* Agrandamiento ligero */
+        }
+
+        /* -------------------------- CONTENIDO DE TEXTO -------------------------- */
+        .contenido-texto{
+            text-align: left; /* ✅ Igual que el primer código */
+            max-width: 1000px; /* ✅ Igual que el primer código */
+            margin: 0 auto; /* ✅ Centrado */
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Contenedor principal que agrupa todo el contenido -->
+    <div class="contenedor">
+
+        <!-- Logo ubicado en la esquina superior con efecto -->
+        <img src="Imagenes/imagen52.jpeg" alt="Logo Sembrando Vida" class="logo-esquina">
+
+        <!-- Título principal de la página -->
+        <h1>CONTACTO</h1>
+        
+        <!-- Menú de navegación con enlaces a todas las secciones -->
+        <div class="menu">
+            <a href="index.html"><button>INICIO</button></a>
+            <a href="2TiposdeHuerto.html"><button>TIPOS HUERTOS</button></a>
+            <a href="3Caracteristicas.html"><button>CARACTERISTICAS</button></a>
+            <a href="4SelecciondeVegetales.html"><button>SELECCION VEGETALES</button></a>
+            <a href="5CuidadodelosVegetales.html"><button>CUIDADO VEGETALES</button></a>
+            <a href="6MaterialesyRecursos.html"><button>MATERIALES RECURSOS</button></a>
+            <a href="7ProductosaDesarrollar.html"><button>PRODUCTOS</button></a>
+            <a href="8Contacto.html"><button>CONTACTO</button></a>
+        </div>
+
+        <!-- Contenedor de contenido principal -->
+        <div class="contenido-texto">
+            <!-- Subtítulo de la sección de formulario -->
+            <h2>💡Formulario</h2>
+
+            <!-- Contenedor del formulario de opinión -->
+            <div class="form">
+                <div class="contenedor-formulario">
+                    <!-- Título interno del formulario -->
+                    <h3>📝 Cuéntanos tu opinión y sugerencias <span class="obligatorio">*</span></h3>
+                    
+                    <!-- Formulario que envía datos al servicio de Google Apps Script -->
+                    <form action="https://formsubmit.co/sembrando.vida046@gmail.com" method="POST" class="formulario-opinion" onsubmit="enviarDatos(event)">
+                    <input type="hidden" name="_subject" value="Nuevo mensaje🌱">
+                    <input type="hidden" name="_captcha" value="false"> <!-- Quita el control de seguridad -->
+                    <input type="hidden" name="_template" value="table"> <!-- Te llega ordenado como tabla -->
+                        
+                        <!-- Campo: Nombre completo (obligatorio) -->
+                        <div class="campo-formulario">
+                            <label for="nombre">Nombre completo <span class="obligatorio">*</span> :</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre aquí..." required>
+                        </div>
+
+                        <!-- Campo: Edad (obligatorio, valores entre 1 y 120) -->
+                        <div class="campo-formulario">
+                            <label for="edad">Edad <span class="obligatorio">*</span> :</label>
+                            <input type="number" id="edad" name="edad" min="1" max="120" placeholder="¿Cuántos años tienes?" required>
+                        </div>
+
+                        <!-- Campo: Correo electrónico (obligatorio, formato email) -->
+                        <div class="campo-formulario">
+                            <label for="correo">Correo electrónico <span class="obligatorio">*</span> :</label>
+                            <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+                        </div>
+
+                        <!-- Campo: Selección de postre favorito (obligatorio) -->
+                        <div class="campo-formulario">
+                            <label for="postre_favorito">¿Cuál es tu postre favorito? <span class="obligatorio">*</span> :</label>
+                            <select id="postre_favorito" name="postre_favorito" required>
+                                <option value="">-- Selecciona una opción --</option>
+                                <option value="pastel">🍰 Pastel de zanahoria</option>
+                                <option value="atole">🥛 Atole de zanahoria</option>
+                                <option value="helado">🍦 Helado de zanahoria</option>
+                            </select>
+                        </div>
+
+                        <!-- Campo: Idea innovadora (texto largo, obligatorio) -->
+                        <div class="campo-formulario">
+                            <label for="idea_innovadora">¿Qué idea innovadora tienes para mejorarlos? (sabor, presentación, etc.) <span class="obligatorio">*</span> :</label>
+                            <textarea id="idea_innovadora" name="idea_innovadora" rows="4" placeholder="Escribe aquí tus ideas, sugerencias o nuevas combinaciones..." required></textarea>
+                        </div>
+
+                        <!-- Campo: Experiencia del usuario (texto largo, obligatorio) -->
+                        <div class="campo-formulario">
+                            <label for="experiencia">¿Cómo ha sido tu experiencia probándolos? <span class="obligatorio">*</span> :</label>
+                            <textarea id="experiencia" name="experiencia" rows="3" placeholder="Cuéntanos qué te parecieron, qué fue lo que más te gustó..." required></textarea>
+                        </div>
+
+                        <!-- Botón de envío del formulario -->
+                        <div class="boton-enviar">
+                            <button type="submit">Enviar...</button>
+                        </div>
+                    </form>
+                </div> 
+            </div>
+
+            <!-- Texto informativo final con datos del equipo -->
+            <p class="texto-final">
+                <br>¡SEMBRANDO VIDA!</br>
+                EQUIPO 7 - 302
+                <br>MÁRQUEZ FLORES RICARDO & ROMERO MIRANDA JESÚS AMADOR</br>
+            </p>
+
+            <!-- Galería de imágenes al final de la página -->
+            <div class="contenedor-imagenes-horizontal">
+                <img src="Imagenes/imagen52.jpeg" alt="Elaboración de productos con zanahoria">
+                <img src="Imagenes/imagen53.jpeg" alt="Productos finales de zanahoria">
+            </div>
+        </div>
+    </div>
+
+
+<!-- SECCIÓN DE DATOS ESCOLARES - PIE DE PÁGINA - INICIO -->
+<!-- Recuadro alineado exactamente al ancho del contenedor blanco, colores en gama verde -->
+<div style="
+    /* Espacio superior para separarlo del contenido */
+    margin-top: 25px;
+    /* Espacio interno igual al resto de recuadros */
+    padding: 12px 20px;
+    /* 🎨 Color de fondo verde muy claro, combina perfecto con el fondo de la página #E8F5E9 */
+    background-color: #E8F5E9;
+    /* Bordes redondeados iguales a todo el diseño */
+    border-radius: 6px;
+    /* 🟩 Bordes laterales en tono verde medio, igual al de los botones y detalles */
+    border-left: 4px solid #66BB6A;
+    border-right: 4px solid #66BB6A;
+    /* Sombra suave coherente con el diseño */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+    /* 📏 ANCHO EXACTO: igual al contenedor principal (1200px), NO SE PASA */
+    max-width: 1200px;
+    width: 100%;
+    /* Centrado perfecto */
+    margin-left: auto;
+    margin-right: auto;
+    /* Texto centrado */
+    text-align: center;
+">
+    <!-- Texto pequeño, color café oscuro igual a subtítulos -->
+    <p style="
+        /* Tamaño pequeño, tipo pie de página */
+        font-size: 12px;
+        /* Espaciado cómodo entre líneas */
+        line-height: 1.5;
+        /* 🎨 Color café oscuro, igual a tus subtítulos */
+        color: #5D4037;
+        /* Grosor normal, elegante */
+        font-weight: normal;
+        /* Quita fondo y bordes heredados del estilo <p> */
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        margin: 0;
+        /* Alineación centrada */
+        text-align: center;
+        /* Ligero espaciado para mejor acabado */
+        letter-spacing: 0.2px;
+    ">
+        Ricardo Márquez Flores - Jesús Amador Romero Miranda<br>
+        Tercer Grado - Grupo II<br>
+        Escuela Preparatoria Oficial Núm. 46<br>
+        San Bartolo Morelos, México, mayo 2026
+    </p>
+</div>
+<!-- SECCIÓN DE DATOS ESCOLARES - PIE DE PÁGINA - FIN -->
+
+</body>
+</html>
