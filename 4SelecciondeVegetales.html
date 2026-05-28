@@ -1,0 +1,270 @@
+<!DOCTYPE html> <!-- Define el tipo y versión de documento HTML -->
+<html lang="es"> <!-- Define idioma español -->
+<head> <!-- Sección de metadatos, título y estilos -->
+    <meta charset="UTF-8"> <!-- Codificación de caracteres -->
+    <title>SELECCIONDEVEGETALES</title> <!-- Título de la pestaña -->
+    <style> /* Inicia estilos CSS */
+
+        /* -------------------------- ESTILO GENERAL DEL CUERPO -------------------------- */
+        body{
+            background-color: #E8F5E9; /* Color de fondo verde muy claro, igual al diseño */
+            font-family: "Segoe UI", Roboto, sans-serif; /* Fuente idéntica a la primera página */
+            margin: 0px; /* Sin márgenes externos */
+            padding: 20px; /* Espacio alrededor de toda la página */
+        }
+
+        /* -------------------------- CONTENEDOR PRINCIPAL -------------------------- */
+        .contenedor{
+            text-align: center; /* Centra todo el contenido */
+            max-width: 1200px; /* Ancho máximo igual */
+            margin: auto; /* Centra en pantalla */
+            background-color: rgba(255,255,255,0.85); /* Fondo blanco semitransparente */
+            padding: 30px; /* Espacio interno */
+            border-radius: 20px; /* Bordes redondeados */
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Sombra suave */
+            position: relative; /* Necesario para posicionar el logo */
+        }
+
+        /* -------------------------- LOGO EN ESQUINA -------------------------- */
+        .logo-esquina{
+            position: absolute; /* Posición absoluta respecto al contenedor */
+            top: 15px; /* Distancia superior */
+            left: 15px; /* Distancia izquierda */
+            width: 140px; /* Tamaño igual */
+            height: 140px; /* Tamaño igual */
+            object-fit: cover; /* Ajuste de imagen */
+            border-radius: 50%; /* Forma circular */
+            border: 4px solid #66BB6A; /* Borde verde */
+            background-color: white; /* Fondo blanco detrás */
+            padding: 4px; /* Espacio interno */
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1); /* Sombra ligera */
+            transition: transform 0.3s ease; /* ✅ EFECTO: Transición suave */
+        }
+
+        /* ✅ EFECTO AL PASAR EL MOUSE EN EL LOGO */
+        .logo-esquina:hover{
+            transform: scale(1.05); /* Zoom leve, igual al diseño */
+        }
+
+        /* -------------------------- ESTILO TÍTULO PRINCIPAL -------------------------- */
+        h1{
+            color: #2E7D32; /* Color verde oscuro */
+            font-size: 48px; /* Tamaño grande */
+            text-align: center; /* Centrado */
+            width: fit-content; /* Ajuste al texto */
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1); /* Sombra de texto */
+            padding-bottom: 10px; /* Espacio debajo */
+            border-bottom: 4px solid #FF9800; /* Línea naranja debajo, IGUAL A LA IMAGEN */
+            margin: 40px auto 30px auto; /* Separación correcta */
+            display: block; /* Comportamiento de bloque */
+            font-weight: bold; /* Negrita */
+            letter-spacing: 1.5px; /* Espaciado entre letras */
+        }
+
+        /* -------------------------- ESTILO SUBTÍTULOS H2 -------------------------- */
+        h2{
+            color: #5D4037; /* Color marrón */
+            font-size: 28px; /* Tamaño igual */
+            text-align: left; /* Alineación izquierda */
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.1); /* Sombra ligera */
+            padding: 10px 0; /* Espacio arriba/abajo */
+            border-bottom: 3px solid #81C783; /* Línea verde clara */
+            display: inline-block; /* Ajuste al contenido */
+            margin-left: 0; /* Sin margen izquierdo */
+        }
+
+        /* -------------------------- ESTILO SUBTÍTULOS H3 -------------------------- */
+        h3{
+            color: #D3783F; /* Color naranja/marrón */
+            font-size: 22px; /* Tamaño igual */
+            text-align: left; /* Alineación izquierda */
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.08); /* Sombra muy suave */
+            padding: 8px 0; /* Espacio vertical */
+            border-bottom: 2px solid #C8E6C9; /* Línea verde muy clara */
+            width: fit-content; /* Ajuste al texto */
+            margin: 15px 0 10px 0; /* Márgenes */
+            font-weight: bold; /* Negrita */
+        }
+
+        /* -------------------------- ESTILO MENÚ DE NAVEGACIÓN -------------------------- */
+        .menu{
+            display: flex; /* Alineación horizontal */
+            align-items: center; /* Centrado vertical */
+            justify-content: center; /* Centrado horizontal */
+            flex-wrap: nowrap; /* Sin salto de línea */
+            gap: 8px; /* Espacio entre botones */
+            margin: 50px auto 30px auto; /* ✅ SEPARACIÓN EXACTA IGUAL A LA IMAGEN */
+            padding: 8px 15px; /* Relleno interno */
+            background-color: rgba(121, 85, 72, 0.1); /* Fondo tenue del recuadro */
+            border-radius: 15px; /* Bordes redondeados */
+            width: fit-content; /* Ancho automático */
+            box-shadow: 0 2px 6px rgba(0,0,0,0.09); /* Sombra suave */
+        }
+
+        /* -------------------------- ESTILO BOTONES -------------------------- */
+        button{
+            width: 125px; /* Ancho fijo */
+            height: 42px; /* Altura fija */
+            font-size: 12px; /* Tamaño de letra */
+            font-weight: bold; /* Negrita */
+            color: white; /* Texto blanco */
+            background-color: #66BB6A; /* Fondo verde */
+            border: none; /* Sin borde */
+            border-radius: 8px; /* Bordes redondeados */
+            cursor: pointer; /* Manita al pasar */
+            box-shadow: 0 3px 6px rgba(0,0,0,0.15); /* Sombra de botón */
+            transition: all 0.3s ease; /* Animación suave */
+        }
+
+        /* -------------------------- EFECTO HOVER BOTONES -------------------------- */
+        button:hover{
+            background-color: #FF9800; /* Cambio a naranja */
+            transform: translateY(-2px); /* Efecto de levantar */
+        }
+
+        /* -------------------------- SECCIÓN DE CONTENIDO -------------------------- */
+        .contenido-texto{
+            text-align: left; /* Texto a la izquierda */
+            max-width: 1000px; /* Ancho máximo */
+            margin: 0 auto; /* Centrado del bloque */
+        }
+
+        /* -------------------------- CONTENEDOR IMÁGENES HORIZONTAL -------------------------- */
+        .contenedor-imagenes-horizontal{
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 20px;
+            margin: 25px 0;
+            flex-wrap: wrap;
+        }
+
+        /* -------------------------- ESTILO IMÁGENES -------------------------- */
+        .contenedor-imagenes-horizontal img{
+            width: 310px;
+            height: 210px;
+            object-fit: cover;
+            border-radius: 8px; /* ✅ BORDES POCO REDONDEADOS, IGUAL AL ORIGINAL */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            border: 3px solid #c8e6c9; /* ✅ BORDE VERDE CLARO IGUAL */
+            transition: transform 0.3s ease;
+        }
+
+        .contenedor-imagenes-horizontal img:hover{
+            transform: scale(1.05);
+        }
+
+        /* -------------------------- ESTILO PÁRRAFOS (RECUDRO AMARILLO/NARANJA) -------------------------- */
+        p{
+            font-size: 18px; /* Tamaño de letra */
+            line-height: 1.7; /* Espaciado entre líneas */
+            color: #333333; /* Texto gris oscuro */
+            text-align: justify; /* Texto justificado */
+            padding: 20px; /* Espacio interno */
+            background-color: #fcf8dc; /* ✅ COLOR AMARILLO/BEIGE EXACTO DE LA IMAGEN */
+            border-radius: 4px; /* ✅ BORDES POCO REDONDEADOS, IGUAL AL ORIGINAL */
+            margin: 15px 0; /* Espacio entre párrafos */
+            border-left: 4px solid #ff9800; /* ✅ BORDE IZQUIERDO NARANJA, IGUAL AL DISEÑO */
+        }
+
+    </style> <!-- Fin estilos -->
+</head> <!-- Fin cabecera -->
+
+<body> <!-- Inicio contenido visible -->
+    <div class="contenedor"> <!-- Contenedor principal -->
+
+        <!-- Logo con efecto de movimiento -->
+        <img src="../SembrandoVida/Imagenes/imagen52.jpeg" alt="Logo" class="logo-esquina">
+
+        <!-- Título principal -->
+        <h1>SELECCIÓN DE VEGETALES</h1>
+        
+        <!-- Menú con todos los botones + CONTACTO -->
+        <div class="menu">
+            <a href="1Inicio.html"><button>INICIO</button></a>
+            <a href="2TiposdeHuerto.html"><button>TIPOS HUERTOS</button></a>
+            <a href="3Caracteristicas.html"><button>CARACTERISTICAS</button></a>
+            <a href="4SelecciondeVegetales.html"><button>SELECCION VEGETALES</button></a>
+            <a href="5CuidadodelosVegetales.html"><button>CUIDADO VEGETALES</button></a>
+            <a href="6MaterialesyRecursos.html"><button>MATERIALES RECURSOS</button></a>
+            <a href="7ProductosaDesarrollar.html"><button>PRODUCTOS</button></a>
+            <a href="8Contacto.html"><button>CONTACTO</button></a>
+        </div>
+
+        <!-- Contenido de texto e imágenes -->
+        <div class="contenido-texto">
+            <h2>🌾¿Qué sembramos?</h2>
+
+            <div class="contenedor-imagenes-horizontal">
+                <img src="../SembrandoVida/Imagenes/imagen32.jpg" alt="Ejemplo de Huerto en cajones o cajas">
+                <img src="../SembrandoVida/Imagenes/imagen33.jpg" alt="Ejemplo de Huerto en cajones o cajas">
+                <img src="../SembrandoVida/Imagenes/imagen34.jpg" alt="Ejemplo de Huerto en cajones o cajas">
+            </div>
+
+            <h3>🥕Zanahoria</h3>
+            <p>Para su cultivo se requiere tierra suelta, profunda y bien drenada, libre de piedras para que la raíz crezca sin deformaciones. Se siembra directamente en el lugar definitivo, se mantiene la tierra húmeda sin encharcamientos y se deja espacio suficiente entre plantas tras su nacimiento. La cosecha se realiza entre los 2 y 4 meses después de sembrar. Aporta gran cantidad de betacarotenos que el cuerpo transforma en vitamina A, además de vitaminas del grupo B, C y minerales como el potasio. Mejora la visión, protege la piel, favorece la digestión, ayuda a controlar los niveles de azúcar y colesterol, fortalece las defensas y aporta pocos nutrientes y mucha agua, siendo ideal para dietas saludables. <strong style="font-weight: bold; color: #5D4037;">Nosotros elegimos la zanahoria como materia prima para nuestros productos por sus cualidades de siembra/cosecha y sus aportaciones a la salud. Además de ser un vegetal que se adapta a nuestras ideas de producción.</strong></p>
+            
+            <h3>🌿Cilantro</h3>
+            <p>Es una hierba de crecimiento rápido que se adapta tanto a la tierra como a macetas o cajones, prefiriendo suelos fértiles y lugares con luz moderada. Se siembra directamente evitando trasplantes que puedan dañar sus raíces, se riega con frecuencia manteniendo la humedad y se recolecta a las 4 o 6 semanas, pudiendo aprovechar sus hojas o sus semillas. Contiene vitaminas A, C, K y del complejo B, así como minerales como el hierro, el calcio y el magnesio. Ayuda a eliminar toxinas del cuerpo, mejora la digestión, reduce malestares estomacales, regula el azúcar en sangre, protege la salud del corazón, combate infecciones y favorece la salud ósea.</p>
+            
+            <h3>🥬Espinaca</h3>
+            <p>Es una hortaliza de ciclo corto que crece mejor en suelos ricos en materia orgánica y climas templados. Se siembra a poca profundidad, se riega de forma frecuente y por la base para evitar enfermedades, y tras su nacimiento se dejan distancias adecuadas entre plantas. Se puede cosechar entre los 40 y 50 días, ya sea recogiendo solo las hojas externas o cortando toda la planta. Es muy nutritiva y aporta gran cantidad de hierro, además de vitaminas A, C, K, ácido fólico y minerales como el calcio y el magnesio. Ayuda a prevenir la anemia, protege las células del daño oxidativo, cuida la salud de los ojos, favorece el tránsito intestinal, reduce el riesgo de enfermedades cardíacas y aporta energía sin sumar calorías innecesarias.</p>
+            
+        </div>
+    </div>
+
+<!-- SECCIÓN DE DATOS ESCOLARES - PIE DE PÁGINA - INICIO -->
+<!-- Recuadro alineado exactamente al ancho del contenedor blanco, colores en gama verde -->
+<div style="
+    /* Espacio superior para separarlo del contenido */
+    margin-top: 25px;
+    /* Espacio interno igual al resto de recuadros */
+    padding: 12px 20px;
+    /* 🎨 Color de fondo verde muy claro, combina perfecto con el fondo de la página #E8F5E9 */
+    background-color: #E8F5E9;
+    /* Bordes redondeados iguales a todo el diseño */
+    border-radius: 6px;
+    /* 🟩 Bordes laterales en tono verde medio, igual al de los botones y detalles */
+    border-left: 4px solid #66BB6A;
+    border-right: 4px solid #66BB6A;
+    /* Sombra suave coherente con el diseño */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+    /* 📏 ANCHO EXACTO: igual al contenedor principal (1200px), NO SE PASA */
+    max-width: 1200px;
+    width: 100%;
+    /* Centrado perfecto */
+    margin-left: auto;
+    margin-right: auto;
+    /* Texto centrado */
+    text-align: center;
+">
+    <!-- Texto pequeño, color café oscuro igual a subtítulos -->
+    <p style="
+        /* Tamaño pequeño, tipo pie de página */
+        font-size: 12px;
+        /* Espaciado cómodo entre líneas */
+        line-height: 1.5;
+        /* 🎨 Color café oscuro, igual a tus subtítulos */
+        color: #5D4037;
+        /* Grosor normal, elegante */
+        font-weight: normal;
+        /* Quita fondo y bordes heredados del estilo <p> */
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        margin: 0;
+        /* Alineación centrada */
+        text-align: center;
+        /* Ligero espaciado para mejor acabado */
+        letter-spacing: 0.2px;
+    ">
+        Ricardo Márquez Flores - Jesús Amador Romero Miranda<br>
+        Tercer Grado - Grupo II<br>
+        Escuela Preparatoria Oficial Núm. 46<br>
+        San Bartolo Morelos, México, mayo 2026
+    </p>
+</div>
+<!-- SECCIÓN DE DATOS ESCOLARES - PIE DE PÁGINA - FIN -->
+
+</body>
+</html>
