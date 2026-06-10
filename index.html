@@ -1,0 +1,313 @@
+<!DOCTYPE html> <!-- Define el tipo de documento y la versión de HTML -->
+<html lang="es"> <!-- Establece el idioma del contenido como español -->
+<head> <!-- Sección de cabecera: contiene metadatos, título y estilos -->
+    <meta charset="UTF-8"> <!-- Define la codificación de caracteres para admitir tildes y símbolos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace que la página se adapte a dispositivos móviles -->
+    <title>INICIO</title> <!-- Título que aparece en la pestaña del navegador -->
+    <style> /* Inicia la sección de estilos CSS para dar diseño a la página */
+
+        /* -------------------------- ESTILO GENERAL DEL CUERPO -------------------------- */
+        body{
+            background-color: #E8F5E9; /* Color de fondo verde muy claro para toda la página */
+            font-family: "Segoe UI", Roboto, sans-serif; /* Define la fuente principal del texto */
+            margin: 0px; /* Elimina el margen predeterminado del navegador */
+            padding: 20px; /* Agrega espacio interno alrededor de todo el contenido */
+        }
+
+        /* -------------------------- CONTENEDOR PRINCIPAL -------------------------- */
+        .contenedor{
+            text-align: center; /* Centra todo el contenido dentro de este bloque */
+            max-width: 1200px; /* Limita el ancho máximo para pantallas grandes */
+            margin: auto; /* Centra el contenedor horizontalmente en la página */
+            background-color: rgba(255,255,255,0.85); /* Fondo blanco semi-transparente */
+            padding: 30px; /* Espacio interno alrededor de todo el contenido */
+            border-radius: 20px; /* Redondea las esquinas del contenedor */
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Sombra suave para dar profundidad */
+            position: relative; /* Necesario para posicionar el logo de forma absoluta dentro de este bloque */
+        }
+
+        /* -------------------------- LOGO EN LA ESQUINA SUPERIOR IZQUIERDA -------------------------- */
+        .logo-esquina{
+            position: absolute; /* Posiciona el logo respecto al contenedor principal */
+            top: 15px; /* Distancia desde el borde superior */
+            left: 15px; /* Distancia desde el borde izquierdo */
+            width: 140px; /* Ancho fijo de la imagen */
+            height: 140px; /* Altura fija de la imagen */
+            object-fit: cover; /* Ajusta la imagen sin deformarla */
+            border-radius: 50%; /* Hace que la imagen tenga forma circular */
+            border: 4px solid #66BB6A; /* Borde verde alrededor del logo */
+            background-color: white; /* Fondo blanco detrás de la imagen */
+            padding: 4px; /* Espacio entre la imagen y el borde */
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1); /* Sombra ligera debajo del logo */
+        }
+
+        /* -------------------------- ESTILO DEL TÍTULO PRINCIPAL -------------------------- */
+        h1{
+            color: #2E7D32; /* Color verde oscuro para el texto */
+            font-size: 48px; /* Tamaño de letra grande y resaltante */
+            text-align: center; /* Centra el texto del título */
+            width: fit-content; /* El ancho se ajusta automáticamente al contenido */
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1); /* Sombra suave al texto */
+            padding-bottom: 10px; /* Espacio inferior antes de la línea decorativa */
+            border-bottom: 4px solid #FF9800; /* Línea naranja debajo del título */
+            margin: 40px auto 30px auto; /* Margen superior e inferior, centrado horizontalmente */
+            display: block; /* Se comporta como bloque independiente */
+            font-weight: bold; /* Texto en negrita */
+            letter-spacing: 1.5px; /* Espaciado amplio entre letras */
+        }
+
+        /* -------------------------- ESTILO DE LOS SUBTÍTULOS -------------------------- */
+        h2{
+            color: #5D4037; /* Color marrón para los subtítulos */
+            font-size: 28px; /* Tamaño de letra mediano-grande */
+            text-align: left; /* Alinea el texto a la izquierda */
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.1); /* Sombra ligera en el texto */
+            padding: 10px 0; /* Espacio vertical interno arriba y abajo */
+            border-bottom: 3px solid #81C783; /* Línea decorativa verde clara debajo del subtítulo */
+            display: inline-block; /* Se ajusta al contenido pero permite propiedades de bloque */
+            margin-left: 0; /* Sin margen izquierdo adicional */
+        }
+
+        /* -------------------------- ESTILO DEL MENÚ DE NAVEGACIÓN -------------------------- */
+        .menu{
+            display: flex; /* Usa diseño flexible para alinear botones en fila */
+            align-items: center; /* Alinea verticalmente los elementos al centro */
+            justify-content: center; /* Centra todo el menú horizontalmente */
+            flex-wrap: nowrap; /* Evita que los botones salten a otra línea */
+            gap: 8px; /* Espacio de 8 píxeles entre cada botón */
+            margin: 60px auto 30px auto; /* Margen arriba y abajo, centrado horizontalmente */
+            padding: 8px 15px; /* Relleno interno vertical y horizontal del menú */
+            background-color: rgba(121, 85, 72, 0.1); /* Fondo marrón muy tenue y transparente */
+            border-radius: 15px; /* Bordes redondeados en el contenedor del menú */
+            width: fit-content; /* El ancho se adapta al contenido total de los botones */
+            box-shadow: 0 2px 6px rgba(0,0,0,0.09); /* Sombra muy suave alrededor del menú */
+        }
+
+        /* -------------------------- ESTILO DE LOS BOTONES -------------------------- */
+        button{
+            width: 125px; /* Ancho fijo para todos los botones */
+            height: 42px; /* Altura fija para todos los botones */
+            font-size: 12px; /* Tamaño de letra */
+            font-weight: bold; /* Texto en negrita */
+            color: white; /* Color de texto blanco */
+            background-color: #66BB6A; /* Color de fondo verde */
+            border: none; /* Sin borde predeterminado */
+            border-radius: 8px; /* Bordes redondeados */
+            cursor: pointer; /* Cambia el cursor a mano al pasar */
+            box-shadow: 0 3px 6px rgba(0,0,0,0.15); /* Sombra para efecto 3D */
+            transition: all 0.3s ease; /* Animación suave en cambios */
+        }
+
+        /* -------------------------- EFECTO AL PASAR EL CURSOR EN BOTONES -------------------------- */
+        button:hover{
+            background-color: #FF9800; /* Cambia color a naranja */
+            transform: translateY(-2px); /* Eleva ligeramente el botón */
+        }
+
+        /* -------------------------- SECCIÓN DE CONTENIDO DE TEXTO -------------------------- */
+        .contenido-texto{
+            text-align: left; /* Alinea todo el texto a la izquierda */
+            max-width: 1000px; /* Limita el ancho para mejor lectura */
+            margin: 0 auto; /* Centra el bloque de texto */
+        }
+
+        /* -------------------------- ESTILO DE PÁRRAFOS -------------------------- */
+        p{
+            font-size: 18px; /* Tamaño de letra cómodo para lectura */
+            line-height: 1.7; /* Espacio amplio entre líneas */
+            color: #333333; /* Color de texto gris oscuro */
+            text-align: justify; /* Alinea el texto uniformemente en ambos lados */
+            padding: 20px; /* Espacio interno dentro del recuadro */
+            background-color: rgba(245, 245,220, 0.7); /* Fondo color crema con transparencia */
+            border-radius: 12px; /* Bordes redondeados */
+            margin: 15px 0; /* Espacio entre párrafos */
+            border-left: 5px solid #FF9800; /* Borde decorativo izquierdo naranja */
+        }
+
+        /* -------------------------- ESTILO DEL VIDEO -------------------------- */
+        video{
+            display: block; /* Se comporta como bloque */
+            margin: 20px auto; /* Margen arriba y abajo, centrado */
+            border-radius: 15px; /* Bordes redondeados */
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* Sombra marcada */
+            border: 5px solid #D7CCC8; /* Borde color madera clara */
+        }
+
+        /* -------------------------- GALERÍA DE IMÁGENES -------------------------- */
+        .galeria{
+            text-align: center; /* Centra las imágenes */
+            margin-top: 20px; /* Espacio superior */
+        }
+
+        /* -------------------------- ESTILO DE LAS IMÁGENES -------------------------- */
+        img{
+            width: 600px; /* Ancho estándar */
+            height: 400px; /* Altura estándar */
+            object-fit: cover; /* Ajuste de imagen sin deformación */
+            border-radius: 12px; /* Bordes redondeados */
+            margin: 12px; /* Espacio alrededor de cada imagen */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* Sombra suave */
+            border: 4px solid #C8E6C9; /* Borde verde claro */
+            transition: transform 0.3s ease; /* Animación suave */
+        }
+
+        /* -------------------------- EFECTO AL PASAR EL CURSOR EN IMÁGENES -------------------------- */
+        img:hover{
+            transform: scale(1.05); /* Aumenta ligeramente el tamaño (zoom) */
+        }
+
+        /* -------------------------- SECCIÓN DE CONTACTO -------------------------- */
+        .contacto{
+            margin-top: 40px; /* Espacio superior amplio */
+            padding: 15px; /* Espacio interno */
+            width: 100%; /* Ocupa todo el ancho disponible */
+            box-sizing: border-box; /* Incluye padding en el cálculo del ancho */
+            background-color: #C8E6C9; /* Fondo verde claro */
+            border-radius: 15px; /* Bordes redondeados */
+            text-align: center; /* Centra el contenido */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Sombra suave */
+        }
+
+        /* -------------------------- TÍTULO DE CONTACTO -------------------------- */
+        .contacto h3{
+            color: #2E7D32; /* Color verde oscuro */
+            font-size: 20px; /* Tamaño de letra */
+            margin: 0px 0px 10px 0px; /* Solo margen inferior */
+        }
+
+        /* -------------------------- ICONO DE INSTAGRAM -------------------------- */
+        .icono-insta{
+            width: 50px; /* Tamaño pequeño del icono */
+            height: 50px; /* Altura igual al ancho */
+            transition: transform 0.3s ease; /* Animación suave */
+        }
+
+        /* -------------------------- EFECTO AL PASAR EL CURSOR EN EL ICONO -------------------------- */
+        .icono-insta:hover{
+            transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+        }
+
+    </style> <!-- Fin de la sección de estilos CSS -->
+</head> <!-- Fin de la cabecera -->
+
+<body> <!-- Inicia el contenido visible que se muestra en el navegador -->
+
+    <!-- Contenedor principal que agrupa todo el contenido de la página -->
+    <div class="contenedor">
+
+        <!-- Imagen del logo ubicada en la esquina superior izquierda -->
+        <img src="Imagenes/imagen52.jpeg" alt="Logo" class="logo-esquina">
+
+        <!-- Título principal de la página -->
+        <h1>INTRODUCCIÓN</h1>
+
+        <!-- Menú de navegación con enlaces a todas las secciones (incluye el nuevo botón CONTACTO) -->
+        <div class="menu">
+            <a href="index.html"><button>INICIO</button></a> <!-- Botón de Inicio -->
+            <a href="2TiposdeHuerto.html"><button>TIPOS HUERTOS</button></a> <!-- Botón de Tipos de Huertos -->
+            <a href="3Características.html"><button>CARACTERISTICAS</button></a> <!-- Botón de Características -->
+            <a href="4SeleccióndeVegetales.html"><button>SELECCION VEGETALES</button></a> <!-- Botón de Selección -->
+            <a href="5CuidadodelosVegetales.html"><button>CUIDADO VEGETALES</button></a> <!-- Botón de Cuidado -->
+            <a href="6MaterialesyRecursos.html"><button>MATERIALES RECURSOS</button></a> <!-- Botón de Materiales -->
+            <a href="7ProductosaDesarrollar.html"><button>PRODUCTOS</button></a> <!-- Botón de Productos -->
+            <a href="8Contacto.html"><button>CONTACTO</button></a> <!-- NUEVO BOTÓN AGREGADO: Botón de Contacto -->
+        </div>
+
+        <!-- Video principal de la página, configurado para reproducirse automáticamente -->
+        <video width="80%" autoplay muted loop>
+            <source src="Imagenes/banner.mp4" type="video/mp4"> <!-- Ruta del archivo de video -->
+        </video>
+
+        <!-- Sección que contiene toda la información textual explicativa -->
+        <div class="contenido-texto">
+            <h2>📃Origen y Concepto</h2> <!-- Subtítulo -->
+            <p>La creación de huertos en casa utilizando huacales o cajas de madera se ha convertido en una iniciativa innovadora y accesible para transformar espacios reducidos en áreas productivas. Esta técnica de agricultura modular permite aprovechar materiales reciclados para construir jardines funcionales y estéticos, facilitando el cultivo de hortalizas, hierbas y plantas aromáticas sin necesidad de grandes extensiones de tierra ni inversiones costosas.</p>
+
+            <h2>♻️Sostenibilidad y Reutilización</h2> <!-- Subtítulo -->
+            <p>Desde el punto de vista ambiental, este proyecto promueve la economía circular al dar una segunda vida a estructuras de madera que generalmente se desechan. Al reutilizar los huacales como maceteros o estructuras de soporte, se reduce la generación de residuos y se fomenta una cultura de respeto por los recursos, demostrando que es posible producir alimentos minimizando el impacto negativo sobre el planeta.</p>
+
+            <h2>🌱Impacto Ecologico</h2> <!-- Subtítulo -->
+            <p>La implementación de estos huertos contribuye directamente a la mejora del entorno natural. Las plantas ayudan a purificar el aire, aumentan la humedad ambiental, reducen la temperatura y proporcionan refugio para insectos polinizadores. Además, al cultivar nuestros propios alimentos, disminuimos la huella de carbono asociada al transporte y comercialización de productos agrícolas.</p>
+
+            <h2>🎒Valor Educativo y Formativo</h2> <!-- Subtítulo -->
+            <p>En el ámbito escolar, esta actividad representa una herramienta pedagógica de gran valor. Permite a los estudiantes conectar teórica y prácticamente con conceptos de biología, ecología, matemáticas y nutrición, convirtiendo el aprendizaje en una experiencia vivencial. Los alumnos desarrollan habilidades manuales, paciencia y responsabilidad al encargarse del cuidado y mantenimiento de las plantas.</p>
+
+            <h2>🧑‍🤝‍🧑Fortalecimiento  de la Comunidad</h2> <!-- Subtítulo -->
+            <p>Más allá de la producción de alimentos, los huertos en casa actúan como puntos de encuentro que fortalecen los lazos sociales y el sentido de pertenencia al colaborar para su diseño y construcción. Fomentan el trabajo en equipo, la cooperación y la convivencia entre alumnos, docentes y padres de familia, creando un ambiente armónico donde se comparten conocimientos, esfuerzos y resultados, enriqueciendo así la vida comunitaria.</p>
+
+            <h2>🩺Salud y Seguridad Alimentaria</h2> <!-- Subtítulo -->
+            <p>Finalmente, esta práctica garantiza el acceso a alimentos frescos, sanos y libres de agroquímicos dañinos, promoviendo hábitos de vida saludable desde temprana edad. Al comprender el proceso desde la semilla hasta la mesa, la comunidad escolar valora más el alimento, reduce el desperdicio y adquiere conciencia sobre la importancia de una alimentación nutritiva y sostenible para el futuro.</p>
+        </div>
+
+        <!-- Sección de galería de imágenes -->
+        <div class="galeria">
+            <img src="Imagenes/imagen26.jpg" alt="Foto" width="600" height="400"> <!-- Imagen de la galería -->
+        </div>
+
+        <!-- Sección de contacto con el identificador para el enlace del botón -->
+        <div id="contacto" class="contacto">
+            <h3>Encuéntranos en...</h3> <!-- Título de la sección -->
+            <!-- Enlace al perfil de Instagram -->
+            <a href="https://www.instagram.com/sembrando_vida_epo46/" target="_blank">
+                <img src="Imagenes/imagen54.jpg" alt="Instagram" class="icono-insta"> <!-- Icono de Instagram -->
+            </a>
+        </div>
+
+
+    </div> <!-- Fin del contenedor principal -->
+
+<!-- SECCIÓN DE DATOS ESCOLARES - PIE DE PÁGINA - INICIO -->
+<!-- Recuadro alineado exactamente al ancho del contenedor blanco, colores en gama verde -->
+<div style="
+    /* Espacio superior para separarlo del contenido */
+    margin-top: 25px;
+    /* Espacio interno igual al resto de recuadros */
+    padding: 12px 20px;
+    /* 🎨 Color de fondo verde muy claro, combina perfecto con el fondo de la página #E8F5E9 */
+    background-color: #E8F5E9;
+    /* Bordes redondeados iguales a todo el diseño */
+    border-radius: 6px;
+    /* 🟩 Bordes laterales en tono verde medio, igual al de los botones y detalles */
+    border-left: 4px solid #66BB6A;
+    border-right: 4px solid #66BB6A;
+    /* Sombra suave coherente con el diseño */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+    /* 📏 ANCHO EXACTO: igual al contenedor principal (1200px), NO SE PASA */
+    max-width: 1200px;
+    width: 100%;
+    /* Centrado perfecto */
+    margin-left: auto;
+    margin-right: auto;
+    /* Texto centrado */
+    text-align: center;
+">
+    <!-- Texto pequeño, color café oscuro igual a subtítulos -->
+    <p style="
+        /* Tamaño pequeño, tipo pie de página */
+        font-size: 12px;
+        /* Espaciado cómodo entre líneas */
+        line-height: 1.5;
+        /* 🎨 Color café oscuro, igual a tus subtítulos */
+        color: #5D4037;
+        /* Grosor normal, elegante */
+        font-weight: normal;
+        /* Quita fondo y bordes heredados del estilo <p> */
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        margin: 0;
+        /* Alineación centrada */
+        text-align: center;
+        /* Ligero espaciado para mejor acabado */
+        letter-spacing: 0.2px;
+    ">
+        Ricardo Márquez Flores - Jesús Amador Romero Miranda<br>
+        Tercer Grado - Grupo II<br>
+        Escuela Preparatoria Oficial Núm. 46<br>
+        San Bartolo Morelos, México, mayo 2026
+    </p>
+</div>
+<!-- SECCIÓN DE DATOS ESCOLARES - PIE DE PÁGINA - FIN -->
+
+</body> <!-- Fin del contenido visible -->
+</html> <!-- Fin del documento HTML -->
